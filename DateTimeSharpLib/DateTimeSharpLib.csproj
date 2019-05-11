@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright />
+    <PackageLicenseUrl>https://raw.githubusercontent.com/merklegroot/DateTimeSharp/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/merklegroot/DateTimeSharp</PackageProjectUrl>
+    <Description>A simple Date / Time utility for .NET
+MIT License</Description>
+    <PackageId>DateTimeSharp</PackageId>
+    <Company />
+  </PropertyGroup>
+
+</Project>
