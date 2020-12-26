@@ -9,6 +9,7 @@
     <Description>A simple Date / Time utility for .NET | MIT License</Description>
     <PackageId>DateTimeSharp</PackageId>
     <Company />
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
 </Project>

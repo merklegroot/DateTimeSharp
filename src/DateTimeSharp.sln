@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeSharpLib", "DateTimeSharpLib\DateTimeSharpLib.csproj", "{FA8129C6-3305-450E-AD7F-CEB4400CEB9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeSharp", "DateTimeSharp\DateTimeSharp.csproj", "{FA8129C6-3305-450E-AD7F-CEB4400CEB9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
