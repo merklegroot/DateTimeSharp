@@ -37,7 +37,11 @@ jobs:
       working-directory: ./src
       run: dotnet test --no-restore --verbosity normal
 
+    - name: Pack
+      working-directory: ./src
+      run: dotnet pack --configuration Release
+
     - name: Publish
-      working-directory: ./src/bin/Release
+      working-directory: ./src
       run: dotnet nuget publish DateTimeSharp.1.0.0.nupkg -s https://nuget.pkg.github.com/merklegroot/index.json --api-key ${{secrets.NUGET_API_KEY}}
 
