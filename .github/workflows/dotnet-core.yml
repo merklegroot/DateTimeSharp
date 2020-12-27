@@ -28,14 +28,16 @@ jobs:
     - name: Install dependencies
       working-directory: ./src
       run: dotnet restore
+    
     - name: Build
       working-directory: ./src
       run: dotnet build --configuration Release --no-restore
-    - name: Test
+    
+    - name: Run Unit Tests
       working-directory: ./src
       run: dotnet test --no-restore --verbosity normal
-    - name: Publish Nuget Package
-      uses: brandedoutcast/publish-nuget@v2.5.2
-      with:
-          PROJECT_FILE_PATH: src/DateTimeSharp/DateTimeSharp.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+
+    - name: Publish
+      working-directory: ./src/bin/Release
+      run: dotnet nuget publish DateTimeSharp.1.0.0.nupkg -s https://nuget.pkg.github.com/merklegroot/index.json --api-key ${{secrets.NUGET_API_KEY}}
+
