@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace DateTimeSharpLib
+namespace DateTimeSharp
 {
-    public static class DateTimeSharpUtil
+    public static class DateTimeUtil
     {
         public static DateTime? UnixTimeStampToDateTime(decimal unixTimeStamp)
         {
@@ -42,15 +42,15 @@ namespace DateTimeSharpLib
             return dtDateTime;
         }
 
-        public static long GetUnixTimeStamp()
-        {
-            return GetUnixTimeStamp(DateTime.UtcNow);
-        }
+        /// <summary>January 1st, 1970 (UTC)</summary>
+        public static DateTime DawnOfComputing => new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
-        public static long GetUnixTimeStamp(DateTime utcTime)
-        {
-            return (long)(utcTime.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
-        }
+        /// <summary>Seconds since the January 1st, 1970</summary>
+        public static long GetEpoch() => GetEpoch(DateTime.UtcNow);
+
+        /// <summary>Seconds since the January 1st, 1970</summary>
+        public static long GetEpoch(DateTime utcTime) =>
+            (long)(utcTime.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
 
         public static long GetUnixMillisecondsTimeStamp()
         {
